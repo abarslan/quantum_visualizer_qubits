@@ -1,0 +1,2 @@
+import supercoefficients
+result = supercoefficients.generate_normalized_coefficients()

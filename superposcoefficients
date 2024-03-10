@@ -1,0 +1,22 @@
+import numpy as np
+def generate_normalized_coefficients():
+    # Generate random complex coefficients, 1j * np.random.rand() generates a 
+    # random complex number where the real part is zero and the imaginary part 
+    # is a random number between 0 and 1 example 0.3j.
+    alpha = np.random.rand() + 1j * np.random.rand()
+    beta = np.random.rand() + 1j * np.random.rand()
+    gamma = np.random.rand() + 1j * np.random.rand()
+    delta = np.random.rand() + 1j * np.random.rand()
+
+    # Normalize the coefficients, calculate the normalization factor as the 
+    # square root of the sum of the squares of the absolute values of the coefficients
+    # (a*a)+(b*b)+(g*g)+(d*d)=1=coeffs
+    # norm_factor = sqrt(coeffs)
+    norm_factor = np.sqrt(np.abs(alpha)**2 + np.abs(beta)**2 + np.abs(gamma)**2 + np.abs(delta)**2)
+    alpha /= norm_factor
+    beta /= norm_factor
+    gamma /= norm_factor
+    delta /= norm_factor
+    results =[alpha, beta, gamma, delta]
+
+    return results
